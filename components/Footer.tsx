@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-white/[0.06] px-6 py-8">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#FF6B6B] to-[#FF8E8E]" />
+          <Image src="/images/app-icon.png" alt="Bebilog" width={24} height={24} className="rounded-md" />
           <span className="text-white/50 text-sm font-semibold">Bebilog</span>
         </div>
         <div className="flex gap-6">

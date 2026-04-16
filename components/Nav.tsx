@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import LanguageToggle from "./LanguageToggle";
 import { APP_STORE_URL } from "@/lib/constants";
 
@@ -25,7 +26,7 @@ export default function Nav() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand to-[#FF8E8E]" />
+          <Image src="/images/app-icon.png" alt="Bebilog" width={28} height={28} className="rounded-lg" />
           <span className="text-white font-bold text-base">Bebilog</span>
         </div>
         <div className="flex items-center gap-6">
