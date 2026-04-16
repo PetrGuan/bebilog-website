@@ -12,6 +12,7 @@ export const COLORS = {
 } as const;
 
 export type FeatureKey =
+  | "smartLog"
   | "tracking"
   | "insights"
   | "predictions"
@@ -30,12 +31,20 @@ export type FeatureConfig = {
 
 export const FEATURES: FeatureConfig[] = [
   {
+    key: "smartLog",
+    color: "#5AC8FA",
+    colorRgb: "90,200,250",
+    gradientTo: "#AF82DE",
+    bgTint: "#0a0c14",
+    layout: "text-left",
+  },
+  {
     key: "tracking",
     color: COLORS.brand,
     colorRgb: "255,107,107",
     gradientTo: COLORS.feed,
     bgTint: "#0a0a0a",
-    layout: "text-left",
+    layout: "text-right",
   },
   {
     key: "insights",
@@ -43,7 +52,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "80,200,120",
     gradientTo: COLORS.appointment,
     bgTint: "#0a0f0a",
-    layout: "text-right",
+    layout: "text-left",
   },
   {
     key: "predictions",
@@ -51,7 +60,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "175,130,255",
     gradientTo: COLORS.feed,
     bgTint: "#0f0a14",
-    layout: "text-left",
+    layout: "text-right",
   },
   {
     key: "growth",
@@ -59,7 +68,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "80,200,120",
     gradientTo: "#80E0A0",
     bgTint: "#0a100a",
-    layout: "text-right",
+    layout: "text-left",
   },
   {
     key: "vaccine",
@@ -67,7 +76,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "255,69,58",
     gradientTo: COLORS.brand,
     bgTint: "#140a0a",
-    layout: "text-left",
+    layout: "text-right",
   },
   {
     key: "food",
@@ -75,7 +84,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "255,159,67",
     gradientTo: COLORS.feed,
     bgTint: "#14100a",
-    layout: "text-right",
+    layout: "text-left",
   },
 ];
 

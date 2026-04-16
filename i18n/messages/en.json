@@ -18,6 +18,12 @@
     "androidComingSoon": "Android — Coming Soon"
   },
   "features": {
+    "smartLog": {
+      "label": "Smart Log",
+      "title": "Just say it.",
+      "titleHighlight": "Done.",
+      "description": "Powered by Apple Intelligence. Speak, type, or snap a photo of a daycare note — Smart Log parses it into multiple records instantly. No forms, no tapping. All processed on-device."
+    },
     "tracking": {
       "label": "All-in-One Tracking",
       "title": "Everything your baby needs,",

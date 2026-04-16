@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import FeatureSection from "@/components/FeatureSection";
+import SmartLogViz from "@/features/SmartLogViz";
 import TrackingGrid from "@/features/TrackingGrid";
 import InsightsViz from "@/features/InsightsViz";
 import PredictionTimeline from "@/features/PredictionTimeline";
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const FEATURE_VISUALS: Record<string, React.ComponentType> = {
+  smartLog: SmartLogViz,
   tracking: TrackingGrid,
   insights: InsightsViz,
   predictions: PredictionTimeline,

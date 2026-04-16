@@ -18,6 +18,12 @@
     "androidComingSoon": "Android — 即将推出"
   },
   "features": {
+    "smartLog": {
+      "label": "智能记录",
+      "title": "说一句话，",
+      "titleHighlight": "全部搞定。",
+      "description": "Apple Intelligence 驱动。语音、文字或拍照托儿所日报——Smart Log 瞬间解析成多条记录。无需填表，无需反复点击。全部在设备端完成。"
+    },
     "tracking": {
       "label": "一站式追踪",
       "title": "宝宝所需，",
