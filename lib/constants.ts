@@ -109,4 +109,4 @@ export const RECORD_TYPES = [
   { key: "photo", icon: "📸", color: "#C8C8C8", colorRgb: "200,200,200" },
 ] as const;
 
-export const APP_STORE_URL = "https://apps.apple.com/app/bebilog/id6504726922";
+export const APP_STORE_URL = "https://apps.apple.com/us/app/bebilog-baby-tracker/id6759827652";
