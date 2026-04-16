@@ -21,6 +21,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+    metadataBase: new URL("https://bebilog.cn"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        zh: "/zh",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: `https://bebilog.cn/${locale}`,
+      siteName: "Bebilog",
+      type: "website",
+    },
   };
 }
 
