@@ -12,13 +12,26 @@ export default function Footer() {
           <span className="text-white/50 text-sm font-semibold">Bebilog</span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="text-white/30 text-sm hover:text-white/50 transition-colors">
+          <a
+            href="https://petrguan.github.io/Bebilog-privacy-policy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/30 text-sm hover:text-white/50 transition-colors"
+          >
             {t("privacy")}
           </a>
-          <a href="#" className="text-white/30 text-sm hover:text-white/50 transition-colors">
+          <a
+            href="https://petrguan.github.io/Bebilog-privacy-policy/terms-of-service"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/30 text-sm hover:text-white/50 transition-colors"
+          >
             {t("terms")}
           </a>
-          <a href="#" className="text-white/30 text-sm hover:text-white/50 transition-colors">
+          <a
+            href="mailto:Bebilog@outlook.com"
+            className="text-white/30 text-sm hover:text-white/50 transition-colors"
+          >
             {t("support")}
           </a>
         </div>
