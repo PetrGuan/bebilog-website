@@ -1,3 +1,5 @@
+import { HeartPulse } from "lucide-react";
+
 export default function GrowthChart() {
   return (
     <div className="bg-[rgba(80,200,120,0.04)] border border-[rgba(80,200,120,0.1)] rounded-2xl p-6">
@@ -23,7 +25,8 @@ export default function GrowthChart() {
         <text x="380" y="155" fill="rgba(255,255,255,0.3)" fontSize="9">12m</text>
       </svg>
       <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[rgba(255,159,67,0.1)] border border-[rgba(255,159,67,0.2)] rounded-lg mt-3">
-        <span className="text-[#FF9F43] text-xs font-semibold">🏥 Preterm mode: INTERGROWTH-21st charts available</span>
+        <HeartPulse size={14} className="text-[#FF9F43] shrink-0" strokeWidth={1.75} />
+        <span className="text-[#FF9F43] text-xs font-semibold">Preterm mode: INTERGROWTH-21st charts available</span>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { RECORD_TYPES } from "@/lib/constants";
+import LucideIcon from "@/components/LucideIcon";
 
 export default function TrackingGrid() {
   return (
@@ -12,7 +13,9 @@ export default function TrackingGrid() {
             borderColor: `rgba(${type.colorRgb}, 0.15)`,
           }}
         >
-          <div className="text-2xl mb-1.5">{type.icon}</div>
+          <div className="flex justify-center mb-1.5" style={{ color: type.color }}>
+            <LucideIcon name={type.iconName} size={24} />
+          </div>
           <div
             className="text-xs font-semibold capitalize"
             style={{ color: type.color }}

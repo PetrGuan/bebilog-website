@@ -60,7 +60,6 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "175,130,255",
     gradientTo: COLORS.feed,
     bgTint: "#0f0a14",
-
     layout: "text-right",
   },
   {
@@ -90,34 +89,33 @@ export const FEATURES: FeatureConfig[] = [
 ];
 
 export const GRID_ITEMS = [
-  { key: "multiBaby", icon: "👶" },
-  { key: "appleWatch", icon: "⌚" },
-  { key: "siri", icon: "🗣️" },
-  { key: "widget", icon: "📱" },
-  { key: "wholeBrain", icon: "🧠" },
-  { key: "earlyEd", icon: "🎒" },
-  { key: "doctorReport", icon: "📄" },
-  { key: "languages", icon: "🌍" },
-  { key: "preterm", icon: "🏥" },
-  { key: "alerts", icon: "🔔" },
-  { key: "icloud", icon: "☁️" },
-  { key: "piggyBank", icon: "🐷" },
+  { key: "multiBaby", iconName: "Users" },
+  { key: "appleWatch", iconName: "Watch" },
+  { key: "siri", iconName: "Mic" },
+  { key: "widget", iconName: "LayoutGrid" },
+  { key: "wholeBrain", iconName: "Brain" },
+  { key: "earlyEd", iconName: "GraduationCap" },
+  { key: "doctorReport", iconName: "FileText" },
+  { key: "languages", iconName: "Globe" },
+  { key: "preterm", iconName: "HeartPulse" },
+  { key: "alerts", iconName: "Bell" },
+  { key: "icloud", iconName: "Cloud" },
+  { key: "piggyBank", iconName: "PiggyBank" },
 ] as const;
 
 export const RECORD_TYPES = [
-  { key: "feed", icon: "🍼", color: COLORS.feed, colorRgb: "255,200,50" },
-  { key: "sleep", icon: "😴", color: COLORS.sleep, colorRgb: "175,130,255" },
-
-  { key: "diaper", icon: "🧷", color: COLORS.diaper, colorRgb: "230,130,230" },
-  { key: "growth", icon: "📊", color: COLORS.growth, colorRgb: "80,200,120" },
-  { key: "temp", icon: "🌡️", color: COLORS.temp, colorRgb: "255,135,145" },
-  { key: "vaccine", icon: "💉", color: COLORS.vaccine, colorRgb: "255,69,58" },
-  { key: "medicine", icon: "💊", color: COLORS.medicine, colorRgb: "180,140,255" },
-  { key: "food", icon: "🥣", color: COLORS.food, colorRgb: "255,159,67" },
-  { key: "appointment", icon: "📅", color: COLORS.appointment, colorRgb: "50,173,230" },
-  { key: "pumping", icon: "🤱", color: "#64C8F0", colorRgb: "100,200,240" },
-  { key: "milestone", icon: "⭐", color: "#C878FF", colorRgb: "200,120,255" },
-  { key: "photo", icon: "📸", color: "#FFCC00", colorRgb: "255,204,0" },
+  { key: "feed", iconName: "Baby", color: COLORS.feed, colorRgb: "255,200,50" },
+  { key: "sleep", iconName: "Moon", color: COLORS.sleep, colorRgb: "175,130,255" },
+  { key: "diaper", iconName: "Droplets", color: COLORS.diaper, colorRgb: "230,130,230" },
+  { key: "growth", iconName: "TrendingUp", color: COLORS.growth, colorRgb: "80,200,120" },
+  { key: "temp", iconName: "Thermometer", color: COLORS.temp, colorRgb: "255,135,145" },
+  { key: "vaccine", iconName: "Syringe", color: COLORS.vaccine, colorRgb: "255,69,58" },
+  { key: "medicine", iconName: "Pill", color: COLORS.medicine, colorRgb: "180,140,255" },
+  { key: "food", iconName: "UtensilsCrossed", color: COLORS.food, colorRgb: "255,159,67" },
+  { key: "appointment", iconName: "CalendarDays", color: COLORS.appointment, colorRgb: "50,173,230" },
+  { key: "pumping", iconName: "Milk", color: "#64C8F0", colorRgb: "100,200,240" },
+  { key: "milestone", iconName: "Star", color: "#C878FF", colorRgb: "200,120,255" },
+  { key: "photo", iconName: "Camera", color: "#FFCC00", colorRgb: "255,204,0" },
 ] as const;
 
 export const APP_STORE_URL = "https://apps.apple.com/us/app/bebilog-baby-tracker/id6759827652";

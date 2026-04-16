@@ -1,9 +1,11 @@
+import { Baby, Moon, Droplets } from "lucide-react";
+
 const INPUT_TEXT = '"Fed 120ml at 9, napped 10:30 to 11:30, diaper at 1pm"';
 
 const PARSED_ENTRIES = [
-  { icon: "🍼", type: "Feed", detail: "120ml", time: "9:00 AM", color: "#FFC832", colorRgb: "255,200,50" },
-  { icon: "😴", type: "Sleep", detail: "1h 00min", time: "10:30 – 11:30", color: "#AF82FF", colorRgb: "175,130,255" },
-  { icon: "🧷", type: "Diaper", detail: "", time: "1:00 PM", color: "#E682E6", colorRgb: "230,130,230" },
+  { icon: Baby, type: "Feed", detail: "120ml", time: "9:00 AM", color: "#FFC832", colorRgb: "255,200,50" },
+  { icon: Moon, type: "Sleep", detail: "1h 00min", time: "10:30 – 11:30", color: "#AF82FF", colorRgb: "175,130,255" },
+  { icon: Droplets, type: "Diaper", detail: "", time: "1:00 PM", color: "#E682E6", colorRgb: "230,130,230" },
 ];
 
 export default function SmartLogViz() {
@@ -38,36 +40,39 @@ export default function SmartLogViz() {
 
       {/* Parsed entries */}
       <div className="flex flex-col gap-2">
-        {PARSED_ENTRIES.map((entry, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-between px-4 py-2.5 rounded-xl border"
-            style={{
-              background: `rgba(${entry.colorRgb}, 0.06)`,
-              borderColor: `rgba(${entry.colorRgb}, 0.12)`,
-            }}
-          >
-            <div className="flex items-center gap-3">
-              <span className="text-lg">{entry.icon}</span>
-              <div>
-                <div className="text-white text-xs font-semibold">
-                  {entry.type}
-                  {entry.detail && <span className="text-white/50 font-normal"> — {entry.detail}</span>}
-                </div>
-                <div className="text-white/40 text-[10px] mt-0.5">{entry.time}</div>
-              </div>
-            </div>
+        {PARSED_ENTRIES.map((entry, i) => {
+          const Icon = entry.icon;
+          return (
             <div
-              className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
+              key={i}
+              className="flex items-center justify-between px-4 py-2.5 rounded-xl border"
               style={{
-                color: entry.color,
-                background: `rgba(${entry.colorRgb}, 0.1)`,
+                background: `rgba(${entry.colorRgb}, 0.06)`,
+                borderColor: `rgba(${entry.colorRgb}, 0.12)`,
               }}
             >
-              ✓ Ready
+              <div className="flex items-center gap-3">
+                <Icon size={18} style={{ color: entry.color }} strokeWidth={1.75} />
+                <div>
+                  <div className="text-white text-xs font-semibold">
+                    {entry.type}
+                    {entry.detail && <span className="text-white/50 font-normal"> — {entry.detail}</span>}
+                  </div>
+                  <div className="text-white/40 text-[10px] mt-0.5">{entry.time}</div>
+                </div>
+              </div>
+              <div
+                className="text-[10px] font-semibold px-2 py-0.5 rounded-md"
+                style={{
+                  color: entry.color,
+                  background: `rgba(${entry.colorRgb}, 0.1)`,
+                }}
+              >
+                ✓ Ready
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Save all button mock */}

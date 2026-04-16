@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import AnimateInView from "./AnimateInView";
+import LucideIcon from "./LucideIcon";
 import { GRID_ITEMS } from "@/lib/constants";
 
 export default function FeatureGrid() {
@@ -21,7 +22,9 @@ export default function FeatureGrid() {
           {GRID_ITEMS.map((item, i) => (
             <AnimateInView key={item.key} delay={i * 0.03}>
               <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-5 text-center hover:border-white/[0.12] hover:-translate-y-0.5 transition-all">
-                <div className="text-3xl mb-2">{item.icon}</div>
+                <div className="flex justify-center mb-2 text-white/70">
+                  <LucideIcon name={item.iconName} size={28} strokeWidth={1.5} />
+                </div>
                 <div className="text-white text-sm font-semibold">
                   {t(`items.${item.key}.title`)}
                 </div>
