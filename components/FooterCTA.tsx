@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import AnimateInView from "./AnimateInView";
+import { AppleIcon, AndroidIcon } from "./Icons";
 import { APP_STORE_URL } from "@/lib/constants";
 
 export default function FooterCTA() {
@@ -22,10 +23,12 @@ export default function FooterCTA() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white rounded-xl text-[#0a0a0a] font-semibold text-base hover:bg-white/90 transition-colors"
           >
-            🍎 {heroT("downloadIOS")}
+            <AppleIcon className="w-5 h-5" />
+            {heroT("downloadIOS")}
           </a>
           <div className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white/50 text-base cursor-default">
-            🤖 {heroT("androidComingSoon")}
+            <AndroidIcon className="w-5 h-5" />
+            {heroT("androidComingSoon")}
           </div>
         </div>
       </AnimateInView>

@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import PhoneMockup from "./PhoneMockup";
+import { AppleIcon, AndroidIcon } from "./Icons";
 import { APP_STORE_URL } from "@/lib/constants";
 
 export default function Hero() {
@@ -17,9 +18,10 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand/10 border border-brand/20 rounded-full mb-8"
         >
-          <span className="text-xs">🍎</span>
+          <AppleIcon className="w-3.5 h-3.5 text-white/70" />
           <span className="text-white/70 text-xs">{t("badge")}</span>
           <span className="text-white/30 text-xs">·</span>
+          <AndroidIcon className="w-3.5 h-3.5 text-brand/70" />
           <span className="text-brand/70 text-xs">{t("badgeAndroid")}</span>
         </motion.div>
 
@@ -57,11 +59,11 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl text-[#0a0a0a] font-semibold text-base hover:bg-white/90 transition-colors"
           >
-            <span className="text-lg">🍎</span>
+            <AppleIcon className="w-5 h-5" />
             {t("downloadIOS")}
           </a>
           <div className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white/50 text-base cursor-default">
-            <span className="text-lg">🤖</span>
+            <AndroidIcon className="w-5 h-5" />
             {t("androidComingSoon")}
           </div>
         </motion.div>
