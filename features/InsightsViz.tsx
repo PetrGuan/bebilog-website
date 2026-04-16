@@ -2,27 +2,88 @@ const DIMENSIONS = [
   { label: "WEIGHT", value: "P72", pct: 72, color: "#50C878", colorRgb: "80,200,120" },
   { label: "HEIGHT", value: "P65", pct: 65, color: "#AF82DE", colorRgb: "175,130,255" },
   { label: "HEAD", value: "P58", pct: 58, color: "#32ADE6", colorRgb: "50,173,230" },
-  { label: "FEEDING", value: "8x", pct: 0, sub: "avg/day", color: "#FFD700", colorRgb: "255,200,50" },
-  { label: "SLEEP", value: "14.5h", pct: 0, sub: "avg/day", color: "#AF82DE", colorRgb: "175,130,255" },
-  { label: "DIAPERS", value: "7x", pct: 0, sub: "avg/day", color: "#E682E6", colorRgb: "230,130,230" },
+];
+
+const DAILY_STATS = [
+  { label: "FEEDS", value: "8x", sub: "540ml total", color: "#FFD700", colorRgb: "255,200,50" },
+  { label: "SLEEP", value: "14.5h", sub: "4 naps", color: "#AF82DE", colorRgb: "175,130,255" },
+  { label: "DIAPERS", value: "7x", sub: "5 wet · 2 dirty", color: "#E682E6", colorRgb: "230,130,230" },
 ];
 
 export default function InsightsViz() {
   return (
-    <div className="bg-[rgba(80,200,120,0.04)] border border-[rgba(80,200,120,0.1)] rounded-2xl p-6">
-      <div className="grid grid-cols-3 gap-3">
-        {DIMENSIONS.map((d) => (
+    <div className="flex flex-col gap-3">
+      {/* Sleep Window Card */}
+      <div className="bg-[rgba(175,130,255,0.04)] border border-[rgba(175,130,255,0.1)] rounded-2xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-sm">😴</span>
+          <span className="text-white text-sm font-semibold">Sleep Window</span>
+        </div>
+        {/* Progress bar */}
+        <div className="relative h-2.5 bg-white/[0.06] rounded-full mb-3 overflow-hidden">
           <div
-            key={d.label}
-            className="rounded-xl p-4 text-center"
-            style={{ background: `rgba(${d.colorRgb}, 0.08)` }}
-          >
-            <div className="text-[10px] text-white/40 mb-1">{d.label}</div>
-            <div className="text-xl font-bold" style={{ color: d.color }}>
-              {d.value}
-            </div>
-            {d.pct > 0 ? (
-              <div className="w-full h-1 bg-white/5 rounded-full mt-2">
+            className="absolute inset-y-0 left-0 rounded-full"
+            style={{
+              width: "78%",
+              background: "linear-gradient(90deg, #50C878 0%, #FFD700 50%, #FF453A 100%)",
+            }}
+          />
+          {/* Optimal zone marker */}
+          <div className="absolute inset-y-0 left-[40%] w-[25%] border-x-2 border-white/20" />
+        </div>
+        <div className="flex justify-between items-center">
+          <div>
+            <span className="text-[#FF8791] text-xs font-semibold">Overtired</span>
+            <span className="text-white/30 text-xs ml-2">Awake 3h 15m</span>
+          </div>
+          <div className="text-white/40 text-[10px]">
+            Best time: <span className="text-[#AF82DE] font-semibold">14:30 – 15:15</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Feed Window Card */}
+      <div className="bg-[rgba(255,200,50,0.04)] border border-[rgba(255,200,50,0.1)] rounded-2xl p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-sm">🍼</span>
+          <span className="text-white text-sm font-semibold">Feed Window</span>
+        </div>
+        {/* Progress bar */}
+        <div className="relative h-2.5 bg-white/[0.06] rounded-full mb-3 overflow-hidden">
+          <div
+            className="absolute inset-y-0 left-0 rounded-full"
+            style={{
+              width: "55%",
+              background: "linear-gradient(90deg, #50C878 0%, #FFD700 70%, #FF453A 100%)",
+            }}
+          />
+          <div className="absolute inset-y-0 left-[35%] w-[30%] border-x-2 border-white/20" />
+        </div>
+        <div className="flex justify-between items-center">
+          <div>
+            <span className="text-[#50C878] text-xs font-semibold">On track</span>
+            <span className="text-white/30 text-xs ml-2">Last feed 1h 45m ago</span>
+          </div>
+          <div className="text-white/40 text-[10px]">
+            Next: <span className="text-[#FFD700] font-semibold">~15:00</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Growth percentiles row */}
+      <div className="bg-[rgba(80,200,120,0.04)] border border-[rgba(80,200,120,0.1)] rounded-2xl p-5">
+        <div className="grid grid-cols-3 gap-3">
+          {DIMENSIONS.map((d) => (
+            <div
+              key={d.label}
+              className="rounded-xl p-3 text-center"
+              style={{ background: `rgba(${d.colorRgb}, 0.08)` }}
+            >
+              <div className="text-[10px] text-white/40 mb-1">{d.label}</div>
+              <div className="text-lg font-bold" style={{ color: d.color }}>
+                {d.value}
+              </div>
+              <div className="w-full h-1 bg-white/5 rounded-full mt-1.5">
                 <div
                   className="h-full rounded-full"
                   style={{
@@ -31,11 +92,26 @@ export default function InsightsViz() {
                   }}
                 />
               </div>
-            ) : (
-              <div className="text-[10px] text-white/30 mt-1">{d.sub}</div>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Daily stats */}
+        <div className="grid grid-cols-3 gap-3 mt-3">
+          {DAILY_STATS.map((d) => (
+            <div
+              key={d.label}
+              className="rounded-xl p-3 text-center"
+              style={{ background: `rgba(${d.colorRgb}, 0.08)` }}
+            >
+              <div className="text-[10px] text-white/40 mb-1">{d.label}</div>
+              <div className="text-lg font-bold" style={{ color: d.color }}>
+                {d.value}
+              </div>
+              <div className="text-[10px] text-white/30 mt-0.5">{d.sub}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
