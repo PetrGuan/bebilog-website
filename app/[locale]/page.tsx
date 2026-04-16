@@ -10,6 +10,7 @@ import GrowthChart from "@/features/GrowthChart";
 import VaccineSchedule from "@/features/VaccineSchedule";
 import BabyFoodHub from "@/features/BabyFoodHub";
 import FeatureGrid from "@/components/FeatureGrid";
+import Privacy from "@/components/Privacy";
 import Pricing from "@/components/Pricing";
 import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
@@ -46,6 +47,7 @@ export default async function HomePage({ params }: Props) {
         );
       })}
       <FeatureGrid />
+      <Privacy />
       <Pricing />
       <FooterCTA />
       <Footer />

@@ -79,6 +79,27 @@
       "piggyBank": { "title": "存钱罐", "description": "宝宝储蓄追踪" }
     }
   },
+  "privacy": {
+    "title": "宝宝的数据，",
+    "titleHighlight": "只属于你。",
+    "subtitle": "无需注册。没有服务器。没有追踪。只有你和宝宝的数据。",
+    "local": {
+      "title": "100% 本地存储",
+      "description": "所有数据存储在你的设备上。无需注册，不依赖云端。随时离线可用。"
+    },
+    "icloud": {
+      "title": "iCloud 同步",
+      "description": "可选通过 iCloud 在你的 Apple 设备间同步。Apple 端到端加密——我们永远看不到你的数据。"
+    },
+    "noTracking": {
+      "title": "零追踪",
+      "description": "没有分析埋点，没有广告，没有第三方 SDK。我们不收集、不出售、不分享任何个人信息。"
+    },
+    "onDevice": {
+      "title": "端侧 AI",
+      "description": "Smart Log 使用 Apple Intelligence，完全在设备端处理。宝宝的数据绝不离开你的手机。"
+    }
+  },
   "pricing": {
     "title": "简单透明的定价。",
     "subtitle": "免费开始，随时升级。",
