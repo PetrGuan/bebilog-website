@@ -4,17 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Bebilog — Baby Tracking, Simplified",
   description:
-    "Bebilog helps parents track feeding, sleep, diapers, growth, and more — all in one beautiful app.",
+    "Track feeding, sleep, growth, vaccines, and more — all in one beautifully designed app.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+}) {
+  return children;
 }

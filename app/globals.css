@@ -2,11 +2,11 @@
 
 /* CSS custom properties */
 :root {
-  --bg: #0d0d0f;
-  --text-primary: #f5f5f7;
-  --text-secondary: rgba(245, 245, 247, 0.72);
-  --text-tertiary: rgba(245, 245, 247, 0.48);
-  --border-subtle: rgba(245, 245, 247, 0.10);
+  --bg: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  --text-tertiary: rgba(255, 255, 255, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.06);
   --brand: #FF6B6B;
 }
 
@@ -27,8 +27,8 @@
   --color-appointment: #32ADE6;
 
   /* Background and border */
-  --color-bg: #0d0d0f;
-  --color-border-subtle: rgba(245, 245, 247, 0.10);
+  --color-bg: #0a0a0a;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
 }
 
 body {
@@ -40,6 +40,5 @@ body {
 }
 
 ::selection {
-  background: var(--brand);
-  color: #fff;
+  background: rgba(255, 107, 107, 0.3);
 }
