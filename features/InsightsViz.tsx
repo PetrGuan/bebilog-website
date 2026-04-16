@@ -1,12 +1,12 @@
 const DIMENSIONS = [
   { label: "WEIGHT", value: "P72", pct: 72, color: "#50C878", colorRgb: "80,200,120" },
-  { label: "HEIGHT", value: "P65", pct: 65, color: "#AF82DE", colorRgb: "175,130,255" },
+  { label: "HEIGHT", value: "P65", pct: 65, color: "#AF82FF", colorRgb: "175,130,255" },
   { label: "HEAD", value: "P58", pct: 58, color: "#32ADE6", colorRgb: "50,173,230" },
 ];
 
 const DAILY_STATS = [
-  { label: "FEEDS", value: "8x", sub: "540ml total", color: "#FFD700", colorRgb: "255,200,50" },
-  { label: "SLEEP", value: "14.5h", sub: "4 naps", color: "#AF82DE", colorRgb: "175,130,255" },
+  { label: "FEEDS", value: "8x", sub: "540ml total", color: "#FFC832", colorRgb: "255,200,50" },
+  { label: "SLEEP", value: "14.5h", sub: "4 naps", color: "#AF82FF", colorRgb: "175,130,255" },
   { label: "DIAPERS", value: "7x", sub: "5 wet · 2 dirty", color: "#E682E6", colorRgb: "230,130,230" },
 ];
 
@@ -25,7 +25,7 @@ export default function InsightsViz() {
             className="absolute inset-y-0 left-0 rounded-full"
             style={{
               width: "78%",
-              background: "linear-gradient(90deg, #50C878 0%, #FFD700 50%, #FF453A 100%)",
+              background: "linear-gradient(90deg, #50C878 0%, #FFC832 50%, #FF453A 100%)",
             }}
           />
           {/* Optimal zone marker */}
@@ -37,7 +37,7 @@ export default function InsightsViz() {
             <span className="text-white/30 text-xs ml-2">Awake 3h 15m</span>
           </div>
           <div className="text-white/40 text-[10px]">
-            Best time: <span className="text-[#AF82DE] font-semibold">14:30 – 15:15</span>
+            Best time: <span className="text-[#AF82FF] font-semibold">14:30 – 15:15</span>
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function InsightsViz() {
             className="absolute inset-y-0 left-0 rounded-full"
             style={{
               width: "55%",
-              background: "linear-gradient(90deg, #50C878 0%, #FFD700 70%, #FF453A 100%)",
+              background: "linear-gradient(90deg, #50C878 0%, #FFC832 70%, #FF453A 100%)",
             }}
           />
           <div className="absolute inset-y-0 left-[35%] w-[30%] border-x-2 border-white/20" />
@@ -65,7 +65,7 @@ export default function InsightsViz() {
             <span className="text-white/30 text-xs ml-2">Last feed 1h 45m ago</span>
           </div>
           <div className="text-white/40 text-[10px]">
-            Next: <span className="text-[#FFD700] font-semibold">~15:00</span>
+            Next: <span className="text-[#FFC832] font-semibold">~15:00</span>
           </div>
         </div>
       </div>

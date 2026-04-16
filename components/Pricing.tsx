@@ -40,7 +40,7 @@ export default function Pricing() {
 
           <AnimateInView direction="right" className="flex-1">
             <div className="relative bg-gradient-to-b from-[rgba(255,107,107,0.08)] to-[rgba(175,130,255,0.08)] border border-[rgba(255,107,107,0.2)] rounded-2xl p-8 h-full">
-              <div className="absolute -top-2.5 right-5 px-3 py-1 bg-gradient-to-r from-[#FF6B6B] to-[#AF82DE] rounded-md text-white text-[11px] font-bold">
+              <div className="absolute -top-2.5 right-5 px-3 py-1 bg-gradient-to-r from-[#FF6B6B] to-[#AF82FF] rounded-md text-white text-[11px] font-bold">
                 {t("pro.badge")}
               </div>
               <div className="text-[rgba(255,107,107,0.8)] text-sm font-semibold uppercase tracking-wider mb-4">

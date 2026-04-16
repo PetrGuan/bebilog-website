@@ -13,7 +13,7 @@ const ALLERGENS = [
 
 const ALLERGEN_STYLES = {
   safe: { bg: "rgba(80,200,120,0.12)", border: "rgba(80,200,120,0.2)", color: "#50C878", suffix: " ✓" },
-  testing: { bg: "rgba(255,200,50,0.12)", border: "rgba(255,200,50,0.2)", color: "#FFD700", suffix: " ⏳" },
+  testing: { bg: "rgba(255,200,50,0.12)", border: "rgba(255,200,50,0.2)", color: "#FFC832", suffix: " ⏳" },
   pending: { bg: "rgba(255,255,255,0.04)", border: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.4)", suffix: "" },
 };
 

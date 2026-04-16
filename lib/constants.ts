@@ -1,7 +1,7 @@
 export const COLORS = {
   brand: "#FF6B6B",
-  feed: "#FFD700",
-  sleep: "#AF82DE",
+  feed: "#FFC832",
+  sleep: "#AF82FF",
   diaper: "#E682E6",
   growth: "#50C878",
   temp: "#FF8791",
@@ -34,7 +34,7 @@ export const FEATURES: FeatureConfig[] = [
     key: "smartLog",
     color: "#5AC8FA",
     colorRgb: "90,200,250",
-    gradientTo: "#AF82DE",
+    gradientTo: "#AF82FF",
     bgTint: "#0a0c14",
     layout: "text-left",
   },
@@ -60,6 +60,7 @@ export const FEATURES: FeatureConfig[] = [
     colorRgb: "175,130,255",
     gradientTo: COLORS.feed,
     bgTint: "#0f0a14",
+
     layout: "text-right",
   },
   {
@@ -106,6 +107,7 @@ export const GRID_ITEMS = [
 export const RECORD_TYPES = [
   { key: "feed", icon: "🍼", color: COLORS.feed, colorRgb: "255,200,50" },
   { key: "sleep", icon: "😴", color: COLORS.sleep, colorRgb: "175,130,255" },
+
   { key: "diaper", icon: "🧷", color: COLORS.diaper, colorRgb: "230,130,230" },
   { key: "growth", icon: "📊", color: COLORS.growth, colorRgb: "80,200,120" },
   { key: "temp", icon: "🌡️", color: COLORS.temp, colorRgb: "255,135,145" },
@@ -113,9 +115,9 @@ export const RECORD_TYPES = [
   { key: "medicine", icon: "💊", color: COLORS.medicine, colorRgb: "180,140,255" },
   { key: "food", icon: "🥣", color: COLORS.food, colorRgb: "255,159,67" },
   { key: "appointment", icon: "📅", color: COLORS.appointment, colorRgb: "50,173,230" },
-  { key: "pumping", icon: "🤱", color: "#64B4DC", colorRgb: "100,180,220" },
-  { key: "milestone", icon: "⭐", color: "#FFC864", colorRgb: "255,200,100" },
-  { key: "photo", icon: "📸", color: "#C8C8C8", colorRgb: "200,200,200" },
+  { key: "pumping", icon: "🤱", color: "#64C8F0", colorRgb: "100,200,240" },
+  { key: "milestone", icon: "⭐", color: "#C878FF", colorRgb: "200,120,255" },
+  { key: "photo", icon: "📸", color: "#FFCC00", colorRgb: "255,204,0" },
 ] as const;
 
 export const APP_STORE_URL = "https://apps.apple.com/us/app/bebilog-baby-tracker/id6759827652";

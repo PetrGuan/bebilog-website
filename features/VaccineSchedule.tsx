@@ -7,7 +7,7 @@ const VACCINES = [
 
 const STATUS_STYLES = {
   done: { bg: "rgba(80,200,120,0.06)", border: "rgba(80,200,120,0.12)", color: "#50C878", label: "✓ Done" },
-  upcoming: { bg: "rgba(255,200,50,0.06)", border: "rgba(255,200,50,0.15)", color: "#FFD700", label: "Upcoming" },
+  upcoming: { bg: "rgba(255,200,50,0.06)", border: "rgba(255,200,50,0.15)", color: "#FFC832", label: "Upcoming" },
   scheduled: { bg: "rgba(255,255,255,0.02)", border: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.3)", label: "Scheduled" },
 };
 

@@ -1,15 +1,15 @@
 const EVENTS = [
-  { type: "feed", label: "Feed — 120ml", time: "10:30 AM", done: true, countdown: "", color: "#FFD700", colorRgb: "255,200,50" },
-  { type: "sleep", label: "Nap — 1h 20min", time: "11:00 AM - 12:20 PM", done: true, countdown: "", color: "#AF82DE", colorRgb: "175,130,255" },
-  { type: "feed", label: "Next Feed", time: "~1:00 PM", done: false, countdown: "in 40 min", color: "#FFD700", colorRgb: "255,200,50" },
-  { type: "sleep", label: "Sleep Window", time: "~2:30 PM", done: false, countdown: "in 2h 10min", color: "#AF82DE", colorRgb: "175,130,255" },
+  { type: "feed", label: "Feed — 120ml", time: "10:30 AM", done: true, countdown: "", color: "#FFC832", colorRgb: "255,200,50" },
+  { type: "sleep", label: "Nap — 1h 20min", time: "11:00 AM - 12:20 PM", done: true, countdown: "", color: "#AF82FF", colorRgb: "175,130,255" },
+  { type: "feed", label: "Next Feed", time: "~1:00 PM", done: false, countdown: "in 40 min", color: "#FFC832", colorRgb: "255,200,50" },
+  { type: "sleep", label: "Sleep Window", time: "~2:30 PM", done: false, countdown: "in 2h 10min", color: "#AF82FF", colorRgb: "175,130,255" },
 ];
 
 export default function PredictionTimeline() {
   return (
     <div className="bg-[rgba(175,130,255,0.04)] border border-[rgba(175,130,255,0.1)] rounded-2xl p-6">
       <div className="relative pl-5">
-        <div className="absolute left-[6px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FFD700] via-[#AF82DE] to-[rgba(175,130,255,0.2)]" />
+        <div className="absolute left-[6px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FFC832] via-[#AF82FF] to-[rgba(175,130,255,0.2)]" />
         <div className="flex flex-col gap-4">
           {EVENTS.map((event, i) => (
             <div key={i} className="relative">

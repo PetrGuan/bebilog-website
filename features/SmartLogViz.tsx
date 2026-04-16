@@ -1,8 +1,8 @@
 const INPUT_TEXT = '"Fed 120ml at 9, napped 10:30 to 11:30, diaper at 1pm"';
 
 const PARSED_ENTRIES = [
-  { icon: "🍼", type: "Feed", detail: "120ml", time: "9:00 AM", color: "#FFD700", colorRgb: "255,200,50" },
-  { icon: "😴", type: "Sleep", detail: "1h 00min", time: "10:30 – 11:30", color: "#AF82DE", colorRgb: "175,130,255" },
+  { icon: "🍼", type: "Feed", detail: "120ml", time: "9:00 AM", color: "#FFC832", colorRgb: "255,200,50" },
+  { icon: "😴", type: "Sleep", detail: "1h 00min", time: "10:30 – 11:30", color: "#AF82FF", colorRgb: "175,130,255" },
   { icon: "🧷", type: "Diaper", detail: "", time: "1:00 PM", color: "#E682E6", colorRgb: "230,130,230" },
 ];
 
