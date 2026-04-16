@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bebilog.cn/sitemap.xml
