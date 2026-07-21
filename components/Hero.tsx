@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import PhoneMockup from "./PhoneMockup";
 import { AppleIcon, AndroidIcon } from "./Icons";
-import { APP_STORE_URL } from "@/lib/constants";
+import AppStoreBadge from "./AppStoreBadge";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -70,15 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16"
           >
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-white rounded-xl text-[#0a0a0a] font-semibold text-base hover:bg-white/90 transition-colors"
-            >
-              <AppleIcon className="w-5 h-5" />
-              {t("downloadIOS")}
-            </a>
+            <AppStoreBadge className="h-12" />
             <div className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white/50 text-base cursor-default">
               <AndroidIcon className="w-5 h-5" />
               {t("androidComingSoon")}

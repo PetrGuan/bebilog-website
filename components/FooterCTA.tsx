@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import AnimateInView from "./AnimateInView";
-import { AppleIcon, AndroidIcon } from "./Icons";
-import { APP_STORE_URL } from "@/lib/constants";
+import { AndroidIcon } from "./Icons";
+import AppStoreBadge from "./AppStoreBadge";
 
 export default function FooterCTA() {
   const t = useTranslations("footerCTA");
@@ -16,16 +16,8 @@ export default function FooterCTA() {
           {t("title")}
         </h2>
         <p className="text-white/40 text-base mb-8">{t("subtitle")}</p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white rounded-xl text-[#0a0a0a] font-semibold text-base hover:bg-white/90 transition-colors"
-          >
-            <AppleIcon className="w-5 h-5" />
-            {heroT("downloadIOS")}
-          </a>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+          <AppStoreBadge className="h-12" />
           <div className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white/50 text-base cursor-default">
             <AndroidIcon className="w-5 h-5" />
             {heroT("androidComingSoon")}

@@ -138,6 +138,10 @@
     "title": "Start tracking today.",
     "subtitle": "Free to use. No account needed."
   },
+  "midCTA": {
+    "title": "Still deciding?",
+    "subtitle": "Free to use, no account needed — try it today."
+  },
   "footer": {
     "privacy": "Privacy Policy",
     "terms": "Terms",

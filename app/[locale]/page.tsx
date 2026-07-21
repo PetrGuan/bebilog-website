@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
@@ -12,8 +13,10 @@ import BabyFoodHub from "@/features/BabyFoodHub";
 import FeatureGrid from "@/components/FeatureGrid";
 import Privacy from "@/components/Privacy";
 import Pricing from "@/components/Pricing";
+import MidCTA from "@/components/MidCTA";
 import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
+import StickyCTA from "@/components/StickyCTA";
 import { FEATURES } from "@/lib/constants";
 
 type Props = {
@@ -38,12 +41,16 @@ export default async function HomePage({ params }: Props) {
     <main className="min-h-screen bg-[#0a0a0a]">
       <Nav />
       <Hero />
-      {FEATURES.map((feature) => {
+      {FEATURES.map((feature, index) => {
         const Visual = FEATURE_VISUALS[feature.key];
         return (
-          <FeatureSection key={feature.key} feature={feature}>
-            <Visual />
-          </FeatureSection>
+          <Fragment key={feature.key}>
+            <FeatureSection feature={feature}>
+              <Visual />
+            </FeatureSection>
+            {/* Repeat CTA roughly midway through the long feature scroll (after the 4th of 7 sections) */}
+            {index === 3 && <MidCTA />}
+          </Fragment>
         );
       })}
       <FeatureGrid />
@@ -51,6 +58,7 @@ export default async function HomePage({ params }: Props) {
       <Pricing />
       <FooterCTA />
       <Footer />
+      <StickyCTA />
     </main>
   );
 }
